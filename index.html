@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Slay the Gray — Mini Painting Tracker</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0f1117;
+      --surface: #1a1d27;
+      --elevated: #22263a;
+      --border: #2e3249;
+      --primary: #6c8fff;
+      --text: #e8eaf0;
+      --muted: #8b91a8;
+      --subtle: #5a6080;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    nav {
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .nav-brand {
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: var(--primary);
+      text-decoration: none;
+      letter-spacing: 0.3px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    .hero {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 5rem 2rem 4rem;
+      text-align: center;
+    }
+
+    .hero-icon {
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+
+    h1 span {
+      color: var(--primary);
+    }
+
+    .hero-sub {
+      font-size: 1.15rem;
+      color: var(--muted);
+      max-width: 480px;
+      margin: 0 auto 2.5rem;
+    }
+
+    .features {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 2rem 5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+    }
+
+    .feature {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+
+    .feature-icon {
+      font-size: 1.6rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .feature h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+      color: var(--text);
+    }
+
+    .feature p {
+      font-size: 0.875rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .privacy-note {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 0 2rem 4rem;
+      text-align: center;
+    }
+
+    .privacy-note p {
+      font-size: 0.9rem;
+      color: var(--subtle);
+    }
+
+    .privacy-note a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .privacy-note a:hover { text-decoration: underline; }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.5rem 2rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--subtle);
+    }
+
+    footer a {
+      color: var(--muted);
+      text-decoration: none;
+      margin: 0 0.75rem;
+    }
+
+    footer a:hover { color: var(--text); }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-brand" href="/">Slay the Gray</a>
+    <div class="nav-links">
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms of Service</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-icon">🎨</div>
+    <h1>Conquer your <span>Pile of Shame</span></h1>
+    <p class="hero-sub">
+      Slay the Gray is a mobile app for miniature painters to track their collection,
+      log painting sessions, and build a streak — one model at a time.
+    </p>
+  </div>
+
+  <div class="features">
+    <div class="feature">
+      <div class="feature-icon">📋</div>
+      <h3>Kanban Board</h3>
+      <p>Move models through stages — Backlog, Assembly, Primed, Painted, Varnished — at your own pace.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">⏱️</div>
+      <h3>Painting Timer</h3>
+      <p>Log painting sessions per model and watch your total hours grow over time.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🖌️</div>
+      <h3>Paint Library</h3>
+      <p>Track your paint collection and link paints to specific models. Import from PaintRack CSV.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🔥</div>
+      <h3>Streaks & Stats</h3>
+      <p>Build a daily painting streak, earn achievements, and visualize your progress over time.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">📷</div>
+      <h3>Photo Log</h3>
+      <p>Capture progress photos per model and see your improvement at a glance.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🔒</div>
+      <h3>100% Local</h3>
+      <p>No account required. All your data lives on your device — never uploaded to any server.</p>
+    </div>
+  </div>
+
+  <div class="privacy-note">
+    <p>
+      Your data stays on your device. We collect nothing.
+      Read our <a href="/privacy.html">Privacy Policy</a> and <a href="/terms.html">Terms of Service</a>.
+    </p>
+  </div>
+
+  <footer>
+    <a href="/privacy.html">Privacy Policy</a>
+    <a href="/terms.html">Terms of Service</a>
+    <span>&copy; 2025 Slay the Gray</span>
+  </footer>
+
+</body>
+</html>

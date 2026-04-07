@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Slay the Gray</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0f1117;
+      --surface: #1a1d27;
+      --elevated: #22263a;
+      --border: #2e3249;
+      --primary: #6c8fff;
+      --text: #e8eaf0;
+      --muted: #8b91a8;
+      --subtle: #5a6080;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    nav {
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .nav-brand {
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    .content {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 4rem 2rem 5rem;
+    }
+
+    .page-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.3px;
+      margin-bottom: 0.5rem;
+    }
+
+    .updated {
+      font-size: 0.85rem;
+      color: var(--subtle);
+      margin-bottom: 3rem;
+    }
+
+    .highlight {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--primary);
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2.5rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .highlight strong {
+      color: var(--text);
+    }
+
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin: 2.5rem 0 0.75rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    li {
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.5rem 2rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--subtle);
+    }
+
+    footer a {
+      color: var(--muted);
+      text-decoration: none;
+      margin: 0 0.75rem;
+    }
+
+    footer a:hover { color: var(--text); }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="nav-brand" href="/">Slay the Gray</a>
+    <div class="nav-links">
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms of Service</a>
+    </div>
+  </nav>
+
+  <div class="content">
+    <p class="page-label">Legal</p>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: April 6, 2025</p>
+
+    <div class="highlight">
+      <strong>Short version:</strong> Slay the Gray stores all your data locally on your device.
+      The only optional exception is Google Drive backup, which you explicitly opt into —
+      and only your own backup file is ever accessed.
+    </div>
+
+    <h2>1. Information We Collect</h2>
+    <p>
+      Slay the Gray does not collect, store, or transmit any personal information to our servers.
+      The app operates entirely on your local device.
+    </p>
+    <p>Specifically, we do <strong>not</strong> collect:</p>
+    <ul>
+      <li>Device identifiers or advertising IDs</li>
+      <li>Location data</li>
+      <li>Usage analytics or crash reports sent to our servers</li>
+      <li>Any data about your miniature collection, painting sessions, or paint library</li>
+    </ul>
+
+    <h2>2. Local Data Storage</h2>
+    <p>
+      All data you create within the app — including your model collection, painting timers,
+      paint library, photos, streaks, and settings — is stored locally on your device
+      using on-device SQLite storage.
+    </p>
+    <p>
+      If you delete the app, all locally stored data is removed with it. We have no ability
+      to recover your data, as we never had access to it.
+    </p>
+
+    <h2>3. Google Drive Backup (Optional)</h2>
+    <p>
+      Slay the Gray offers an optional backup and restore feature using Google Drive.
+      If you choose to use this feature, you will be asked to sign in with your Google account.
+    </p>
+    <p>
+      The app requests access to the <strong>drive.appdata</strong> scope only. This is a
+      restricted, app-private storage space within your Google Drive that is invisible to
+      other apps and cannot be browsed through the Google Drive UI. We use it solely to
+      store and retrieve your backup file.
+    </p>
+    <p>We specifically do <strong>not</strong>:</p>
+    <ul>
+      <li>Read, modify, or access any other files in your Google Drive</li>
+      <li>Share your Google account information with any third party</li>
+      <li>Store your Google credentials or backup data on our own servers</li>
+      <li>Use your Google account for any purpose other than backup and restore</li>
+    </ul>
+    <p>
+      Google Drive backup is entirely optional. The app is fully functional without it.
+      You can revoke access at any time via your
+      <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">Google Account permissions page</a>.
+    </p>
+
+    <h2>4. Third-Party Services</h2>
+    <p>
+      Beyond the optional Google Drive integration described above, Slay the Gray does not
+      integrate with any third-party analytics, advertising, or tracking services.
+      No SDKs that collect user data are included in the app.
+    </p>
+
+    <h2>5. Permissions</h2>
+    <p>The app may request the following device permissions:</p>
+    <ul>
+      <li><strong>Camera / Photo Library</strong> — to capture or attach progress photos to your models. Photos are stored locally on your device only.</li>
+      <li><strong>Notifications</strong> — to send optional local reminders to paint. These are generated on-device and no notification data is sent externally.</li>
+      <li><strong>Google Sign-In</strong> — only requested if you choose to enable Google Drive backup. Used solely to authenticate with your Drive appdata storage.</li>
+    </ul>
+    <p>All permissions are optional and the app remains functional without them.</p>
+
+    <h2>6. Children's Privacy</h2>
+    <p>
+      Slay the Gray does not knowingly collect any information from anyone, including children
+      under the age of 13. Since we collect no data at all, this policy applies uniformly
+      to all users.
+    </p>
+
+    <h2>7. Changes to This Policy</h2>
+    <p>
+      If we ever change how the app handles data in a way that affects privacy,
+      we will update this page and revise the "Last updated" date above.
+    </p>
+
+    <h2>8. Contact</h2>
+    <p>
+      If you have any questions about this privacy policy, you can reach us via the
+      <a href="https://github.com/esattler/slay-the-gray-homepage/issues" target="_blank" rel="noopener">GitHub repository</a>.
+    </p>
+  </div>
+
+  <footer>
+    <a href="/">Home</a>
+    <a href="/privacy.html">Privacy Policy</a>
+    <a href="/terms.html">Terms of Service</a>
+    <span>&copy; 2025 Slay the Gray</span>
+  </footer>
+
+</body>
+</html>
